@@ -12,7 +12,7 @@ service_account_info = st.secrets["gcp_service_account"]
 # Define the scope
 SCOPES = ['https://www.googleapis.com/auth/drive.file']
 # Authenticate and build the service
-credentials = Credentials.from_service_account_info(service_account_info, scopes=SCOPES
+credentials = Credentials.from_service_account_info(service_account_info, scopes=SCOPES)
 drive_service = build('drive', 'v3', credentials=credentials)
 
 
